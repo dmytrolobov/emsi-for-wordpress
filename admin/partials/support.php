@@ -3,10 +3,11 @@
 	if ( !empty( $_POST['action'] ) && !empty( $_POST['wow_support_field'] ) ) {
 		if (wp_verify_nonce($_POST['wow_support_field'],'wow_support_action') && current_user_can( 'manage_options' )) {	
 			
-			$fname = !empty($_POST['wow-fname']) ? sanitize_text_field($_POST['wow-fname']) : '';
-			$lname = !empty($_POST['wow-lname']) ? sanitize_text_field($_POST['wow-lname']) : '';
+			$fname   = !empty($_POST['wow-fname']) ? sanitize_text_field($_POST['wow-fname']) : '';
+			$lname   = !empty($_POST['wow-lname']) ? sanitize_text_field($_POST['wow-lname']) : '';
 			$message = !empty($_POST['wow-message']) ? sanitize_text_field($_POST['wow-message']) : '';
-			$email = !empty($_POST['wow-email']) ? sanitize_email($_POST['wow-email']) : '';			
+			$email   = !empty($_POST['wow-email']) ? sanitize_email($_POST['wow-email']) : '';			
+			$type    = !empty($_POST['wow-message-type']) ? sanitize_text_field($_POST['wow-message-type']) : '';	
 			
 			if (empty($fname)) {
 				$error[] = 'Please, Enter your First Name.';
@@ -20,13 +21,9 @@
 			if (empty($email)) {
 				$error[] = 'Please, Enter your Email.';
 			}			
-			if ( count($error) == 0 ) {
-				
-				
+			if ( count($error) == 0 ) {				
 				$plugin = $name.' v.'.$version;
-				$website = get_option('home');
-				$message = $_POST['wow-message'];
-				$type = $_POST['wow-message-type'];
+				$website = get_option('home');			
 				
 				$headers = array(
 				'From: '.$fname.' '.$lname.' <'.$email.'>',
