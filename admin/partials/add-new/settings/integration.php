@@ -37,12 +37,6 @@ $woo = array(
 	'val' => isset($param['woo']) ? $param['woo'] : 0,	
 );
 
-$wow_forms = array(
-	'id'   => 'wow_forms',
-	'name' => 'wow_forms',	
-	'type' => 'checkbox',
-	'val' => isset($param['wow_forms']) ? $param['wow_forms'] : 0,	
-);
 
 $users_activity = array(
 	'id'   => 'users_activity',

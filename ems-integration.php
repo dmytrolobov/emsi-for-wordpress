@@ -1,9 +1,9 @@
 <?php
 	/**
 		* Plugin Name:       Email Marketing Services Integration
-		* Plugin URI:        
+		* Plugin URI:        https://wordpress.org/plugins/email-marketing-services-integration
 		* Description:       Easy Wordpress integration with email marketing services.
-		* Version:           1.0
+		* Version:           1.0.1
 		* Author:            Dmytro Lobov		
 		* License:           GPL-2.0+
 		* License URI:       http://www.gnu.org/licenses/gpl-2.0.txt		
@@ -53,7 +53,7 @@
 						'plugin_name'      => 'EMS Integration',
 						'plugin_menu'      => 'EMS Integration',
 						'plugin_home_url'  => ' email-marketing-services-integration',
-						'version'          => '1.0',
+						'version'          => '1.0.1',
 						'base_file'        => basename(__FILE__),
 						'slug'             => dirname(plugin_basename(__FILE__)),
 						'plugin_dir'       => plugin_dir_path( __FILE__ ),

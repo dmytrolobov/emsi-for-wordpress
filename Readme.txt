@@ -1,5 +1,5 @@
 ﻿=== Email Marketing Services Integration ===
-Contributors: Wpcalc, lobov
+Contributors: lobov, Wpcalc
 Donate link: https://wow-estore.com/
 Tags: email integration, email services, email marketing, email subscribe, mailchimp, aweber, activecampaign, sendinblue, getresponse, 
 Requires at least: 4.5
@@ -21,7 +21,6 @@ Plugin Email Marketing Services Integration gives the opportunity to integrate y
 = Integration with the following plugins: = 
 * [Easy Digital Downloads](https://wordpress.org/plugins/easy-digital-downloads/)
 * [WooCommerce](https://wordpress.org/plugins/woocommerce/)
-* [Wow Forms](https://wordpress.org/plugins/mwp-forms/)
 * [Users Activity](https://wordpress.org/plugins/users-activity/)
 
 = Integration with the following email marketing services: =
@@ -45,6 +44,10 @@ Plugin Email Marketing Services Integration gives the opportunity to integrate y
 
 
 == Changelog ==
+
+= 1.0.1 = 
+* Fixed: Class MailChimp
+* Added: hook ems_integration
 
 = 1.0 = 
 * Initial release

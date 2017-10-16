@@ -43,17 +43,7 @@
 					<input type="checkbox" disabled > <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a> <i><small>(not installed)</small></i>	
 					<input type="hidden" name="ems_integration[woo]" value="">
 				<?php } ;?>
-			</div>
-			
-			<div class="wow-admin-col-12">
-				<?php if (class_exists('Wow_Forms_Class') === true) { ;?>
-				<?php echo self::create_option($wow_forms);?> <label for="wow_wow_forms">Wow Forms </label>
-				<input type="hidden" name="ems_integration[wow_forms]" value="">
-				<?php } else { ;?>
-					<input type="checkbox" disabled > <a href="https://wordpress.org/plugins/mwp-forms/" target="_blank">Wow Forms - create any form with custom style</a> <i><small>(not installed)</small></i>	
-					<input type="hidden" name="ems_integration[wow_forms]" value="">
-				<?php } ;?>
-			</div>
+			</div>			
 			
 			<div class="wow-admin-col-12">
 				<?php if (class_exists('Users_Activity') === true) { ;?>

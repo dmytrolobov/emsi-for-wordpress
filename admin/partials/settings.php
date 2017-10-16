@@ -36,15 +36,22 @@
 			</div>
 			
 			<div class="wowbox">
-				<h3><i class="fa fa-star" style="color:#ffd400"></i> Review </h3>
+				<center><img src="<?php echo plugin_dir_url( __FILE__ ); ?>thankyou.png" alt=""  /></center>
+				<hr/>
 				<div class="wow-admin wow-plugins">
-					<p><a href="https://wordpress.org/plugins/<?php echo $this->plugin_home_url; ?>" target="_blank">Leave your rating and review</a> on the work of the plugin and get a 30% discount on all plugins on site https://wow-estore.com. <a href="admin.php?page=<?php echo $this->slug;?>&tab=discount">More information</a> <br/><br/>
-						<em>Best Regards,<br/>
-							<a href="https://wow-estore.com/" target="_blank">Wow-Company Team</a><br/>
-						<a href="mailto:support@wow-company.com">support@wow-company.com</a></em>
-					</p>					
+					<p>We will be very grateful if you <a href="https://wordpress.org/plugins/email-marketing-services-integration" target="_blank">leave a review</a> on the work of the plugin.</p>
+					<p>If you have suggestions on how to improve the plugin or create a new plug-in, write to us via the <a href='admin.php?page=<?php echo $this->slug;?>&tab=support' title="Support page">support form</a>.</p>
+					<p>We really appreciate your reviews and suggestions for improving the plugin.</p>
+					<p>					
+					*****************<br/>
+					<em><b>Best Regards</b>,<br/>						
+						<a href="https://wow-estore.com/" target="_blank">Wow-Company Team</a><br/>
+						Dmytro Lobov<br/>
+						<a href="mailto:support@wow-company.com">support@wow-company.com</a>
+					</em>
 				</div>
-			</div>
+			</div>		
+			
 		</div>
 	</div>			
 	<?php wp_nonce_field('wow_'.$this->pref.'_update','wow_'.$this->pref.'_nonce_field'); ?>

@@ -14,7 +14,9 @@
 		function __construct( $arg ) {	
 			$this->plugin_url = $arg['plugin_url'];			
 			$ems_option = get_option('ems_integration');			
-			$this->option = $ems_option;			
+			$this->option = $ems_option;
+			
+			add_action( 'ems_integration', array( $this, 'subscribe' ), 10, 1 );
 			
 			// Registration
 			if(!empty($ems_option['registration'])){
@@ -34,18 +36,17 @@
 			// WooCommerce
 			if(!empty($ems_option['woo'])){				
 				add_action( 'woocommerce_checkout_order_processed', array( $this, 'subscribe_from_woocommerce' ) );
-			}
+			}		
 			
-			// Wow Forms
-			if(!empty($ems_option['wow_forms'])){				
-				add_action( 'wow_forms_integration', array( $this, 'subscribe_from_wow_forms' ), 10, 2 );
-			}
 				
 			// Users Activity
 			if(!empty($ems_option['users_activity'])){				
 				add_action( 'ua_integration_servises', array( $this, 'subscribe_from_users_activity' ));
 			}	
 		}	
+		public function subscribe( $data ) {			
+			include('integration.php');
+		}
 		
 		public function subscribe_from_registration( $user_id ) {
 			include ('registration.php');			
@@ -61,10 +62,7 @@
 		
 		public function subscribe_from_woocommerce( $order_id ) {			
 			include ('woocommerce.php');
-		}
-		public function subscribe_from_wow_forms ($email, $name) {
-			include ('wow_forms.php');
-		}
+		}		
 		public function subscribe_from_users_activity ($userdata) {
 			include ('users_activity.php');
 		}		

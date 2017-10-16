@@ -54,7 +54,7 @@
 		}
 				
 		private function _raw_request( $method, $args = array() ) {  
-			$option = get_option('ua_options');
+			$option = get_option('ems_integration');
 			$api_key = $option['mailchimp_api'];
 			$api_endpoint = 'https://<dc>.api.mailchimp.com/2.0/';		
 			list(, $datacentre) = explode( '-', $api_key );
