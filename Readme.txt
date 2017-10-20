@@ -45,6 +45,9 @@ Plugin Email Marketing Services Integration gives the opportunity to integrate y
 
 == Changelog ==
 
+= 1.0.2 = 
+* Fixed: minor bug
+
 = 1.0.1 = 
 * Fixed: Class MailChimp
 * Added: hook ems_integration
